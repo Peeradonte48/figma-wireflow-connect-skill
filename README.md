@@ -31,6 +31,8 @@ examples/
   02-clone-edges-login-flow.js      clone-connector.js filled in for a 4-screen login flow
   03-reset-magnets.js               re-point every connector's sides after moving frames
   04-verify-rest.mjs                Node script: list a Section's connectors over the REST API
+  diagrams/login-flow.*             the example board below (png for the README, svg and html sources)
+LICENSE                           MIT
 ```
 
 ## Requirements
@@ -88,11 +90,7 @@ What the agent does:
 
 The board we want:
 
-```
-[Login] --"กด เข้าสู่ระบบ"--> [OTP] --"กรอก OTP ครบ"--> [Choose shop] --"เลือกร้าน"--> [Home]
-   |
-   +--"กด ลืมรหัสผ่าน"--> [Forgot password]
-```
+![Shop app login flow: Login, OTP, Choose shop and Home on the spine row, Forgot password in a variant row under Login, joined by four Connectors labelled with their triggers](examples/diagrams/login-flow.png)
 
 The ids below are made up. A frame's id is the `node-id` in its link, with `-` turned into `:`.
 
@@ -182,3 +180,7 @@ The skill was written for [design-check](https://www.npmjs.com/package/design-ch
 run reads a Section's Connectors to build the flow graph. With design-check installed, step 5 is
 `design-check figma --section <id> --run <run>` and a check of `flow-source.json`. Without it,
 `examples/04-verify-rest.mjs` does the same check.
+
+## License
+
+[MIT](LICENSE)
