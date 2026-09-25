@@ -7,6 +7,11 @@ REST API.
 It works with Claude Code (and any agent that loads `SKILL.md` skills) through the official Figma
 MCP server's `use_figma` tool.
 
+![A real flow board in a Figma design file: a blue "Flow : edit / delete applied promotion" title banner, four white group banners in Thai, and rows of screen frames joined by blue elbowed Connectors](examples/boards/edit-delete-promotion.webp)
+
+*A real board in the layout this skill builds (screens blurred): one title banner, a group
+banner per sub-flow, sub-flows laid out in rows, and every arrow a real Connector.*
+
 ## Why this exists
 
 Three facts about Figma design files that cost real debugging time:
@@ -32,6 +37,7 @@ examples/
   03-reset-magnets.js               re-point every connector's sides after moving frames
   04-verify-rest.mjs                Node script: list a Section's connectors over the REST API
   diagrams/login-flow.*             the example board below (png for the README, svg and html sources)
+  boards/edit-delete-promotion.webp a real board in the house pattern (screens blurred)
 LICENSE                           MIT
 ```
 
@@ -151,7 +157,7 @@ mobile states) are listed as "frames no connector touches", which is expected.
 ## House layout pattern
 
 When no reference board is named, the skill lays the board out like this (full table in
-[`SKILL.md`](connecting-figma-flow-boards/SKILL.md)):
+[`SKILL.md`](connecting-figma-flow-boards/SKILL.md)). The board at the top of this page is one:
 
 - Section fill `#444444`, a white title banner with a blue `#2563EB` "Flow : name" pill.
 - The walk order runs left to right on one spine row, 320px between frames.
