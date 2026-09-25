@@ -9,7 +9,7 @@ MCP server's `use_figma` tool.
 
 ![A real flow board in a Figma design file: a blue "Flow : edit / delete applied promotion" title banner, four white group banners in Thai, and rows of screen frames joined by blue elbowed Connectors](examples/boards/edit-delete-promotion.webp)
 
-*A real board in the layout this skill builds (screens blurred): one title banner, a group
+*A real board laid out and connected by this skill (screens blurred): one title banner, a group
 banner per sub-flow, sub-flows laid out in rows, and every arrow a real Connector.*
 
 ## Why this exists
@@ -37,7 +37,7 @@ examples/
   03-reset-magnets.js               re-point every connector's sides after moving frames
   04-verify-rest.mjs                Node script: list a Section's connectors over the REST API
   diagrams/login-flow.*             the example board below (png for the README, svg and html sources)
-  boards/edit-delete-promotion.webp a real board in the house pattern (screens blurred)
+  boards/edit-delete-promotion.webp a real board built by the skill (screens blurred)
 LICENSE                           MIT
 ```
 
