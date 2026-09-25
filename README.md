@@ -36,6 +36,7 @@ examples/
   02-clone-edges-login-flow.js      clone-connector.js filled in for a 4-screen login flow
   03-reset-magnets.js               re-point every connector's sides after moving frames
   04-verify-rest.mjs                Node script: list a Section's connectors over the REST API
+  diagrams/skill-steps.*            the flowchart of what the agent does (png, svg and html sources)
   diagrams/login-flow.*             the example board below (png for the README, svg and html sources)
   boards/edit-delete-promotion.webp a real board built by the skill (screens blurred)
 LICENSE                           MIT
@@ -81,6 +82,9 @@ Ask for it in plain words, with the Section's link:
 The skill also triggers when `figma.createConnector` throws inside a design file.
 
 What the agent does:
+
+![Flowchart of the skill in three phases. Find a donor: load figma-use, search each page for a CONNECTOR, and if none is found you paste one from FigJam. Connect: you say whether a reference board is named (measure it, or use the house pattern), clone one edge as a smoke test, and if it does not start next to the source frame delete it and check the ids. Lay out and verify: clone the other edges, lay out the rows, re-set magnets, verify over REST, and re-clone any edge that does not join two frames](examples/diagrams/skill-steps.png)
+
 
 1. Loads `figma-use`, then searches the file page by page for a donor `CONNECTOR`. If there is
    none, it asks you to paste one connector from any FigJam board into the file.

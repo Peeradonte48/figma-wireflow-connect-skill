@@ -1,0 +1,203 @@
+<svg viewBox="140 70 1430 800" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="skill-steps-title skill-steps-desc">
+      <title id="skill-steps-title">What the agent does</title>
+      <desc id="skill-steps-desc">Flowchart of the connecting-figma-flow-boards skill: find a donor connector, connect the reference board or house pattern, then lay out and verify over REST, with four decision checks and two steps done by the person running the skill.</desc>
+      <style>@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500;600&amp;family=Noto+Sans+Thai:wght@400;500;600&amp;display=swap');</style><defs>
+        <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+          <polygon points="0 0, 8 3, 0 6" fill="#4f5d75"/>
+        </marker>
+      </defs>
+
+      <rect x="140" y="70" width="1430" height="800" fill="#f5f5f5"/>
+
+      <!-- ===== Phase headers ===== -->
+      <text x="350" y="100" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.14em">PHASE 1 &middot; FIND A DONOR</text>
+      <text x="785" y="100" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.14em">PHASE 2 &middot; CONNECT</text>
+      <text x="1370" y="100" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.14em">PHASE 3 &middot; LAY OUT AND VERIFY</text>
+
+      <!-- =====================================================
+           ARROWS (drawn before nodes)
+           ===================================================== -->
+
+      <!-- Phase 1 main spine -->
+      <line x1="275" y1="208" x2="275" y2="234" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <line x1="275" y1="290" x2="275" y2="316" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <line x1="275" y1="372" x2="275" y2="398" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+      <!-- D1 no -> P1 -->
+      <line x1="360" y1="450" x2="380" y2="450" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="361" y="429" width="18" height="13" rx="3" fill="#f5f5f5"/>
+      <text x="370" y="438" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.1em">no</text>
+
+      <!-- P1 loop back up into N2's right side -->
+      <path d="M 400 422 L 400 344 L 340 344" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+      <!-- D1 yes -> gutter -> D2 top (crossing 1) -->
+      <path d="M 275 502 L 275 545 L 530 545 L 530 140 L 785 140 L 785 160" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="283" y="512" width="26" height="14" rx="3" fill="#f5f5f5"/>
+      <text x="296" y="522" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.1em">yes</text>
+
+      <!-- D2 yes -> N3a -->
+      <line x1="700" y1="212" x2="680" y2="212" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="682" y="192" width="18" height="13" rx="3" fill="#f5f5f5"/>
+      <text x="691" y="201" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.1em">yes</text>
+
+      <!-- D2 no -> N3b -->
+      <line x1="870" y1="212" x2="890" y2="212" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="871" y="192" width="18" height="13" rx="3" fill="#f5f5f5"/>
+      <text x="880" y="201" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.1em">no</text>
+
+      <!-- N3a / N3b legs into merge dot -->
+      <path d="M 615 240 L 615 272 L 779 272" fill="none" stroke="#4f5d75" stroke-width="1.2"/>
+      <path d="M 955 240 L 955 272 L 791 272" fill="none" stroke="#4f5d75" stroke-width="1.2"/>
+      <circle cx="785" cy="272" r="4" fill="#2d3142"/>
+      <line x1="785" y1="272" x2="785" y2="282" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+      <!-- N4 -> D3 -->
+      <line x1="785" y1="338" x2="785" y2="364" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+      <!-- D3 no -> N4f -->
+      <line x1="700" y1="416" x2="680" y2="416" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="682" y="396" width="18" height="13" rx="3" fill="#f5f5f5"/>
+      <text x="691" y="405" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.1em">no</text>
+
+      <!-- N4f loop back up into N4's left side -->
+      <path d="M 615 388 L 615 310 L 720 310" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+      <!-- D3 yes -> gutter -> N5 top (crossing 2) -->
+      <path d="M 785 468 L 785 510 L 1115 510 L 1115 140 L 1295 140 L 1295 160" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="793" y="478" width="26" height="14" rx="3" fill="#f5f5f5"/>
+      <text x="806" y="488" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.1em">yes</text>
+
+      <!-- Phase 3 main spine -->
+      <line x1="1295" y1="216" x2="1295" y2="242" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <line x1="1295" y1="298" x2="1295" y2="324" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <line x1="1295" y1="388" x2="1295" y2="414" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <line x1="1295" y1="478" x2="1295" y2="504" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+      <!-- D4 no -> N8f -->
+      <line x1="1380" y1="556" x2="1400" y2="556" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="1382" y="536" width="18" height="13" rx="3" fill="#f5f5f5"/>
+      <text x="1391" y="545" fill="#4f5d75" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.1em">no</text>
+
+      <!-- N8f loop back up into N7's right side -->
+      <path d="M 1465 528 L 1465 356 L 1360 356" fill="none" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+      <!-- D4 yes -> E -->
+      <line x1="1295" y1="608" x2="1295" y2="660" stroke="#4f5d75" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="1303" y="624" width="26" height="14" rx="3" fill="#f5f5f5"/>
+      <text x="1316" y="634" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.1em">yes</text>
+
+      <!-- =====================================================
+           NODES
+           ===================================================== -->
+
+      <!-- S0 terminal -->
+      <rect x="180" y="160" width="190" height="48" rx="24" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+      <text x="275" y="188" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">&#8220;Connect this Section&#8221;</text>
+
+      <!-- N1 -->
+      <rect x="210" y="234" width="130" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="220" y="250" fill="#7a8399" font-size="7.5" font-family="'Geist Mono', monospace" letter-spacing="0.08em">STEP 1</text>
+      <text x="275" y="268" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Load figma-use</text>
+
+      <!-- N2 -->
+      <rect x="210" y="316" width="130" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="220" y="330" fill="#7a8399" font-size="7.5" font-family="'Geist Mono', monospace" letter-spacing="0.08em">STEP 2</text>
+      <text x="275" y="350" fill="#2d3142" font-size="10.5" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Search each page</text>
+      <text x="275" y="363" fill="#2d3142" font-size="10.5" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">for a CONNECTOR</text>
+
+      <!-- D1 -->
+      <polygon points="275,398 360,450 275,502 190,450" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="275" y="454" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Donor found?</text>
+
+      <!-- P1 (ACCENT) -->
+      <rect x="380" y="422" width="130" height="56" rx="6" fill="rgba(37,99,235,0.08)" stroke="#2563EB" stroke-width="1.4"/>
+      <text x="445" y="436" fill="#2d3142" font-size="10.5" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">You paste one</text>
+      <text x="445" y="450" fill="#2d3142" font-size="10.5" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">connector from</text>
+      <text x="445" y="464" fill="#2d3142" font-size="10.5" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">FigJam</text>
+
+      <!-- D2 (ACCENT) -->
+      <rect x="826" y="141" width="46" height="13" rx="3" fill="#f5f5f5"/>
+      <text x="868" y="150" fill="#2563EB" font-size="7.5" font-family="'Geist Mono', monospace" text-anchor="end" letter-spacing="0.08em">STEP 3</text>
+      <polygon points="785,160 870,212 785,264 700,212" fill="rgba(37,99,235,0.08)" stroke="#2563EB" stroke-width="1.4"/>
+      <text x="785" y="208" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Reference board</text>
+      <text x="785" y="222" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">named?</text>
+
+      <!-- N3a -->
+      <rect x="550" y="184" width="130" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="615" y="208" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Measure the</text>
+      <text x="615" y="222" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">reference board</text>
+
+      <!-- N3b -->
+      <rect x="890" y="184" width="130" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="955" y="208" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Use the</text>
+      <text x="955" y="222" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">house pattern</text>
+
+      <!-- N4 -->
+      <rect x="720" y="282" width="130" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="730" y="298" fill="#7a8399" font-size="7.5" font-family="'Geist Mono', monospace" letter-spacing="0.08em">STEP 4</text>
+      <text x="785" y="316" fill="#2d3142" font-size="10.5" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Clone ONE edge</text>
+      <text x="785" y="329" fill="#2d3142" font-size="10.5" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">(smoke test)</text>
+
+      <!-- D3 -->
+      <polygon points="785,364 870,416 785,468 700,416" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="785" y="412" fill="#2d3142" font-size="10" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Starts next to</text>
+      <text x="785" y="426" fill="#2d3142" font-size="10" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">the source frame?</text>
+
+      <!-- N4f -->
+      <rect x="550" y="388" width="130" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="615" y="412" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Delete it, check</text>
+      <text x="615" y="426" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">the frame ids</text>
+
+      <!-- N5 -->
+      <rect x="1230" y="160" width="130" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="1295" y="184" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Clone the</text>
+      <text x="1295" y="198" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">other edges</text>
+
+      <!-- N6 -->
+      <rect x="1230" y="242" width="130" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="1240" y="258" fill="#7a8399" font-size="7.5" font-family="'Geist Mono', monospace" letter-spacing="0.08em">STEP 5</text>
+      <text x="1295" y="276" fill="#2d3142" font-size="10.5" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Lay out: spine</text>
+      <text x="1295" y="289" fill="#2d3142" font-size="10.5" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">row, variant rows</text>
+
+      <!-- N7 -->
+      <rect x="1230" y="324" width="130" height="64" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="1295" y="348" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Re-set magnets</text>
+      <text x="1295" y="366" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">03-reset-magnets.js</text>
+
+      <!-- N8 -->
+      <rect x="1230" y="414" width="130" height="64" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="1240" y="430" fill="#7a8399" font-size="7.5" font-family="'Geist Mono', monospace" letter-spacing="0.08em">STEP 6</text>
+      <text x="1295" y="448" fill="#2d3142" font-size="10.5" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Verify over REST</text>
+      <text x="1295" y="464" fill="#4f5d75" font-size="9" font-family="'Geist Mono', monospace" text-anchor="middle">04-verify-rest.mjs</text>
+
+      <!-- D4 -->
+      <polygon points="1295,504 1380,556 1295,608 1210,556" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="1295" y="552" fill="#2d3142" font-size="10.5" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Every edge joins</text>
+      <text x="1295" y="566" fill="#2d3142" font-size="10.5" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">two frames?</text>
+
+      <!-- N8f -->
+      <rect x="1400" y="528" width="130" height="56" rx="6" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="1465" y="552" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Re-clone</text>
+      <text x="1465" y="566" fill="#2d3142" font-size="11" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">that edge</text>
+
+      <!-- E terminal -->
+      <rect x="1205" y="660" width="180" height="48" rx="24" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+      <text x="1295" y="688" fill="#2d3142" font-size="12" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Board ready for a flow tool</text>
+
+      <!-- ===== Legend ===== -->
+      <line x1="180" y1="748" x2="1550" y2="748" stroke="rgba(45,49,66,0.12)" stroke-width="0.8"/>
+      <text x="180" y="766" fill="#4f5d75" font-size="8" font-family="'Geist Mono', monospace" letter-spacing="0.14em">LEGEND</text>
+
+      <rect x="183" y="781" width="12" height="12" rx="2" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="206" y="790" fill="#4f5d75" font-size="10" font-family="'Geist Mono', monospace">box = step the agent runs</text>
+
+      <polygon points="189,801 196,808 189,815 182,808" fill="#ffffff" stroke="#2d3142" stroke-width="1"/>
+      <text x="206" y="812" fill="#4f5d75" font-size="10" font-family="'Geist Mono', monospace">diamond = check, yes / no</text>
+
+      <rect x="183" y="822" width="12" height="12" rx="2" fill="rgba(37,99,235,0.08)" stroke="#2563EB" stroke-width="1.4"/>
+      <text x="206" y="831" fill="#4f5d75" font-size="10" font-family="'Geist Mono', monospace">blue = done or decided by you</text>
+
+      <rect x="180" y="842" width="18" height="12" rx="6" fill="rgba(45,49,66,0.03)" stroke="rgba(45,49,66,0.30)" stroke-width="1"/>
+      <text x="206" y="851" fill="#4f5d75" font-size="10" font-family="'Geist Mono', monospace">pill = start / end</text>
+    </svg>
